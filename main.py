@@ -2,8 +2,6 @@ import os
 import shutil
 import zipfile
 
-path = r"C:\Users\jhwin\Music\Tracks\Drum and Bass"
-
 
 def unzip(f, l):
     with zipfile.ZipFile(f, 'r') as zip_ref:
@@ -19,13 +17,10 @@ def rename(f):
     return remove_leading_characters
 
 
-def clean_files(original, unzipped):
-    os.remove(original)
-    os.remove(unzipped)
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
+    
+    path = r"C:\Users\jhwin\Music\Tracks\Drum and Bass"
+
     for file in os.listdir(path):
         if file.endswith(".zip"):
 
